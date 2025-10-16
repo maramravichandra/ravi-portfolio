@@ -1,0 +1,60 @@
+Welcome to My Portfolio!
+
+Hello! My nickname is RaviM. This is my Quarto data visualization
+portfolio showcasing my Python and matplotlib skills.
+
+```{python}
+# Sample line chart: sine and cosine
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 2 * np.pi, 200)
+y1 = np.sin(x)
+y2 = np.cos(x)
+
+plt.style.use('seaborn-v0_8')
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.plot(x, y1, label='sin(x)', color='#1f77b4')
+ax.plot(x, y2, label='cos(x)', color='#ff7f0e')
+ax.set_title('Sample Line Chart — Sine and Cosine')
+ax.set_xlabel('x')
+ax.set_ylabel('value')
+ax.legend()
+ax.grid(alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+```
+
+Figure: A sample line chart produced with matplotlib (sine and cosine).
+
+```{python}
+# Sample bar chart: categorical values
+import matplotlib.pyplot as plt
+import numpy as np
+
+categories = ['A', 'B', 'C', 'D', 'E']
+values = [23, 45, 12, 37, 29]
+
+plt.style.use('seaborn-v0_8')
+fig, ax = plt.subplots(figsize=(7, 4))
+bars = ax.bar(categories, values, color=['#2ca02c', '#1f77b4', '#ff7f0e', '#d62728', '#9467bd'], edgecolor='black')
+ax.set_title('Sample Bar Chart — Categorical Values')
+ax.set_xlabel('Category')
+ax.set_ylabel('Value')
+ax.grid(axis='y', alpha=0.3)
+
+# Add value labels on top of bars
+for bar in bars:
+    height = bar.get_height()
+    ax.annotate(f'{height}',
+                xy=(bar.get_x() + bar.get_width() / 2, height),
+                xytext=(0, 4),
+                textcoords='offset points',
+                ha='center', va='bottom', fontsize=9)
+
+plt.tight_layout()
+plt.show()
+```
+
+Figure: A sample bar chart produced with matplotlib (categorical values).

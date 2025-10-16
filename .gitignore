@@ -1,0 +1,53 @@
+.venv--- a/Users/rc/Documents/DU/2nd/ravi-portfolio/.gitignore
++++ b/Users/rc/Documents/DU/2nd/ravi-portfolio/.gitignore
+@@ -1 +1,48 @@
+-.venv
++# Virtual Environment
+ .venv
++venv/
++env/
++*.egg-info/
++
++# Byte-compiled / optimized / DLL files
++__pycache__/
++*.py[cod]
++*$py.class
++
++# C extensions
++*.so
++
++# Distribution / packaging
++build/
++dist/
++*.egg
++
++# Installer logs
++pip-log.txt
++
++# Unit test / coverage reports
++htmlcov/
++.tox/
++.coverage
++.coverage.*
++.cache
++.pytest_cache/
++
++# Jupyter Notebook
++.ipynb_checkpoints
++
++# IDE / Editor directories
++.idea/
++.vscode/
++
++# OS-generated files
++.DS_Store
++.DS_Store?
++._*
++Thumbs.db
++
++# Environment variables
++# Never commit secrets!
++*.env
++*.env.*
++!*.env.example
+
